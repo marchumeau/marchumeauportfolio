@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinja</title>
+</head>
+<body background="https://coolbackgrounds.io/images/backgrounds/index/aqua-d9b59c89.png">
+{% extends "base.html" %}
+<h2 align = "center" size = "6"> Hello, my name is {{ name }}</h2>
+
+{% block content %}
+{% if hot%}
+<p align = "center" size = "7">Today it is really hot</p>
+{% else %}
+<p align = "center" size = "7">Today it is really cold</p>
+{% endif %}
+<br /><br /><br />
+{% for post in posts%}
+<p align = "center">{{post.title}} </p>
+<p align = "center"> Author: {{post.author}}</p>
+{% endfor%}
+<br /><br /><br />
+{% endblock %}
+
+</body>
+</html>
